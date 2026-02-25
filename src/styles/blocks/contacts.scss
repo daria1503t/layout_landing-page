@@ -1,0 +1,66 @@
+.contacts{
+  &__wrapper{
+    @include pageGrid;
+    row-gap: 48px;
+
+    @include onTablet {
+      row-gap: 80px;
+    }
+
+    @include onDesktop {
+      row-gap: 0px;
+    }
+  }
+
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    grid-column: 1 / -1;
+
+    @include onDesktop {
+      grid-column: span 6;
+    }
+  }
+
+  &__form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item{
+    box-sizing: border-box;
+    height: 48px;
+    font-family: $page-font-family;
+    padding-block: 14px;
+    padding-inline: 16px;
+    font-weight: $main-regular-font-weight;
+    font-size: $form-font-size;
+    letter-spacing: $form-letter-spacing;
+    color: $main-text-color;
+    background-color: $form-background-color;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &--message{
+      height: 148px;
+    }
+
+    &::placeholder{
+      color: $form-placeholder-text-color;
+    }
+
+    @include hover('border', $form-hover-border);
+    @include hover('color', $form-hover-text-color);
+    &:focus{
+      border: 2px solid $form-focus-border-color;
+      outline: none;
+    }
+  }
+
+  &__button{
+    @include buttonStyle;
+  }
+}
