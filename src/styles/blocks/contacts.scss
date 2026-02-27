@@ -1,6 +1,7 @@
 .contacts{
   &__wrapper{
     @include pageGrid;
+
     row-gap: 48px;
 
     @include onTablet {
@@ -8,7 +9,7 @@
     }
 
     @include onDesktop {
-      row-gap: 0px;
+      row-gap: 0;
     }
   }
 
@@ -57,6 +58,12 @@
     &:focus{
       border: 2px solid $form-focus-border-color;
       outline: none;
+    }
+
+    &:-webkit-autofill {
+      font-family: $page-font-family;
+      -webkit-box-shadow: 0 0 0 1000px #F9F9F9 inset;
+      -webkit-text-fill-color: $form-hover-text-color;
     }
   }
 
