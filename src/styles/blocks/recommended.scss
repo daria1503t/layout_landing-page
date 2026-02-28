@@ -1,21 +1,22 @@
-.recommended{
-  &__products{
-    @include pageGrid;
+.recommended {
+  &__products {
+    @include page-grid;
+
     row-gap: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       row-gap: 56px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       row-gap: 0;
     }
   }
 
-  &__product{
+  &__product {
     grid-column: 1 / -1;
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 4;
     }
   }

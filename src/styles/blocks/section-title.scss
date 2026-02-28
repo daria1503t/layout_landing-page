@@ -7,21 +7,21 @@
   line-height: $section-title-line-height;
   text-align: left;
 
-  @include onTablet {
+  @include on-tablet {
     margin-bottom: 56px;
     font-size: 40px;
     line-height: 40px;
   }
 
-  @include onDesktop {
+  @include on-desktop {
     font-size: 48px;
     line-height: 48px;
   }
 
-  &--section-three{
+  &--section-three {
     margin-bottom: 24px;
 
-    @include onTablet {
+    @include on-tablet {
       margin: 0;
     }
   }

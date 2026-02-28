@@ -1,28 +1,29 @@
-.category{
-  &__photos{
-    @include pageGrid;
+.category {
+  &__photos {
+    @include page-grid;
+
     grid-column: 1 / -1;
     margin-bottom: 16px;
   }
 
-  &__link{
+  &__link {
     height: 0;
     position: relative;
     padding-bottom: 100%;
 
-    @include onTablet {
+    @include on-tablet {
       height: 100%;
       position: static;
       padding-bottom: 0;
       grid-column: span 3;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 6;
     }
   }
 
-  &__photo{
+  &__photo {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -30,16 +31,16 @@
 
     @include hover(transform, scale(1.05));
 
-    @include onTablet {
+    @include on-tablet {
       position: static;
     }
 
-    @include onTablet {
+    @include on-desktop {
       position: static;
     }
   }
 
-  &__title{
+  &__title {
     margin: 0;
     font-weight: $main-bold-font-weight;
     font-size: $category-title-font-size;

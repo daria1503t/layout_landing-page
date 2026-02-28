@@ -1,22 +1,23 @@
-.categories{
-  &__wrapper{
+.categories {
+  &__wrapper {
     display: grid;
     row-gap: 40px;
 
-    @include onTablet {
+    @include on-tablet {
       row-gap: 56px;
     }
   }
 
-  &__button-wrapper{
-    @include pageGrid;
+  &__button-wrapper {
+    @include page-grid;
   }
 
-  &__button{
-    @include buttonStyle;
+  &__button {
+    @include button-style;
 
     grid-column: 1 / -1;
-    @include onDesktop {
+
+    @include on-desktop {
       grid-column: span 4;
     }
   }
