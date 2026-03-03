@@ -25,10 +25,12 @@
       transform 0.3s ease;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover &__number {
-      opacity: 1;
-      transform: translateY(0) translateX(0);
+  @include on-desktop {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover &__number {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+      }
     }
   }
 }
